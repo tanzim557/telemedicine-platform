@@ -1,0 +1,69 @@
+<!DOCTYPE null>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard | Cross-Border Telemedicine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/app.css">
+    <meta name="csrf-token" content="">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Doctor Dashboard</h1>
+            <p class="subtitle">Review patient summary and record advice</p>
+        </header>
+
+        <main>
+            <!-- Patient Summary Display -->
+            <div class="summary-card visible" style="margin-top: 0; margin-bottom: 2rem;">
+                <h3>Patient Clinical Summary</h3>
+                <div class="summary-content">
+                    <p><strong>Patient ID:</strong> #1024</p>
+                    <p><strong>Symptoms:</strong> Severe headache, persistent fever (102°F), mild nausea.</p>
+                    <p><strong>Duration:</strong> 3 Days</p>
+                    <p><strong>Severity:</strong> High</p>
+                </div>
+            </div>
+
+            <div class="recording-section">
+                <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Record Advice (English)</h3>
+                <button id="recordBtn" class="record-btn" title="Record Audio">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                    </svg>
+                </button>
+                <p id="statusText" class="status-text">Click the microphone to record prescription</p>
+                
+                <audio id="audioPreview" class="audio-preview" controls></audio>
+                
+                <button id="submitBtn" class="submit-btn" data-context="doctor" data-user-id="2" data-consultation-id="123">
+                    Send Advice & Prescription
+                </button>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>AI is summarizing and translating advice to Bengali...</p>
+            </div>
+
+            <div id="summaryCard" class="summary-card">
+                <h3>Extracted Prescription (Sent to Patient)</h3>
+                <div class="summary-content">
+                    <p><strong>Diagnosis:</strong> Viral Fever</p>
+                    <p><strong>Advice:</strong> Drink plenty of water and rest.</p>
+                    <ul class="medicine-list">
+                        <li class="medicine-item">
+                            <span class="med-name">Paracetamol 500mg</span>
+                            <span class="med-dosage">1-0-1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../public/js/app.js"></script>
+</body>
+</html>

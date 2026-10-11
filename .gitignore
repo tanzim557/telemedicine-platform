@@ -1,0 +1,8 @@
+vendor
+node_modules
+.env
+composer.phar
+Composer-Setup.exe
+__pycache__
+*.pyc
+storage/logs/*
