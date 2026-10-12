@@ -24,14 +24,14 @@ An innovative AI-augmented Telemedicine consultation platform. Integrates a robu
 
 ```
 TELE MEDICINE/
-├── whisper_server.py           # Python Whisper AI Transcription Microservice
-├── START_WHISPER_SERVER.bat    # Quick Launcher for AI Service
-├── START_LARAVEL_SERVER.bat    # Quick Launcher for Laravel Backend
-├── app/
-│   ├── Http/Controllers/ConsultationController.php
-│   ├── Models/Consultation.php, PatientInput.php, DoctorResponse.php
-│   └── Services/MedicalAiService.php
-└── tele-med-app/               # Core Laravel Platform and Views
+|-- whisper_server.py           # Python Whisper AI Transcription Microservice
+|-- START_WHISPER_SERVER.bat    # Quick Launcher for AI Service
+|-- START_LARAVEL_SERVER.bat    # Quick Launcher for Laravel Backend
+|-- app/
+|   |-- Http/Controllers/ConsultationController.php
+|   |-- Models/Consultation.php, PatientInput.php, DoctorResponse.php
+|   |-- Services/MedicalAiService.php
+|-- tele-med-app/               # Core Laravel Platform and Views
 ```
 
 ---
